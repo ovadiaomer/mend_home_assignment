@@ -9,7 +9,7 @@ public class GitHubApiClient {
 
     public static Response sendPostRequest(String endpoint, String body) {
         return given()
-                .header(GitHubConfig.AUTH_HEADER, GitHubConfig.TOKEN_PREFIX + GitHubConfig.TOKEN)
+                .header(GitHubConfig.AUTH_HEADER, GitHubConfig.TOKEN_PREFIX + GitHubConfig.AUTH_HEADER)
                 .header(GitHubConfig.CONTENT_TYPE_HEADER, GitHubConfig.JSON_CONTENT_TYPE)
                 .body(body)
                 .when()
@@ -18,7 +18,7 @@ public class GitHubApiClient {
 
     public static Response sendGetRequest(String endpoint) {
         return given()
-                .header(GitHubConfig.AUTH_HEADER, GitHubConfig.TOKEN_PREFIX + GitHubConfig.TOKEN)
+                .header(GitHubConfig.AUTH_HEADER, GitHubConfig.TOKEN_PREFIX + GitHubConfig.AUTH_HEADER)
                 .header(GitHubConfig.CONTENT_TYPE_HEADER, GitHubConfig.JSON_CONTENT_TYPE)
                 .when()
                 .get(endpoint);
@@ -27,7 +27,7 @@ public class GitHubApiClient {
 
     public static Response sendPatchRequest(String endpoint, String body) {
         return given()
-                .header(GitHubConfig.AUTH_HEADER, GitHubConfig.TOKEN_PREFIX + GitHubConfig.TOKEN)
+                .header(GitHubConfig.AUTH_HEADER, GitHubConfig.TOKEN_PREFIX + GitHubConfig.AUTH_HEADER)
                 .header(GitHubConfig.CONTENT_TYPE_HEADER, GitHubConfig.JSON_CONTENT_TYPE)
                 .body(body)
                 .when()
@@ -36,14 +36,14 @@ public class GitHubApiClient {
 
     public static Response sendDeleteRequest(String endpoint) {
         return given()
-                .header(GitHubConfig.AUTH_HEADER, GitHubConfig.TOKEN_PREFIX + GitHubConfig.TOKEN)
+                .header(GitHubConfig.AUTH_HEADER, GitHubConfig.TOKEN_PREFIX + GitHubConfig.AUTH_HEADER)
                 .when()
                 .delete(endpoint);
     }
 
     public static Response sendPutRequest(String endpoint, String body) {
         return given()
-                .header(GitHubConfig.AUTH_HEADER, GitHubConfig.TOKEN_PREFIX + GitHubConfig.TOKEN)
+                .header(GitHubConfig.AUTH_HEADER, GitHubConfig.TOKEN_PREFIX + GitHubConfig.AUTH_HEADER)
                 .header(GitHubConfig.CONTENT_TYPE_HEADER, GitHubConfig.JSON_CONTENT_TYPE)
                 .body(body)
                 .when()
