@@ -1,4 +1,4 @@
-# Java Maven TestNG Project
+# Java Maven TestNG Home Assignment for Mend
 
 This project is an automation testing suite designed to interact with GitHub's API. It automates common GitHub tasks such as creating, updating, and deleting repositories, branches, and pull requests. The goal is to demonstrate how TestNG and Maven can be used for API testing and automation in a Java-based project.
 
